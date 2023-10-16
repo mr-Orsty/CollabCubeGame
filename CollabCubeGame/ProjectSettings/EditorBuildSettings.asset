@@ -8,5 +8,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: ca9a6c15152dab24fbdd7fed6bcd2344
+  - enabled: 1
+    path: Assets/Scenes/OptionsMenu.unity
+    guid: ea4cf33150a45254194a6b0e2dde670f
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer.unity
+    guid: 065f0500f059fe045ac2812854e68b6e
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 714e384f0344fb0408956b9fc6bd1219
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
