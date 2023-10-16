@@ -15,10 +15,44 @@ public class MenuManager : MonoBehaviourPunCallbacks
     public TMP_InputField createInput;
     public TMP_InputField joinInput;
 
+    public bool isPaused;
+    public GameObject Panel;
+
     void Start()
     {
         inputName.text = PlayerPrefs.GetString("name");
         PhotonNetwork.NickName = inputName.text;
+    }
+
+    public void PauseGame()
+    {
+        Panel.SetActive(true);
+        isPaused = true;
+        Time.timeScale = 0f;
+    }
+
+    public void ResumeGame()
+    {
+        Panel.SetActive(false);
+        isPaused = false;
+        Time.timeScale = 1f;
+    }
+
+    public void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
+
     }
 
     public void CreateRoom()
@@ -40,7 +74,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
 
     public void BackToMenu()
     {
-      SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Menu");
     }
 
     public void PlayButton()
@@ -63,4 +97,5 @@ public class MenuManager : MonoBehaviourPunCallbacks
     {
         SceneManager.LoadScene("OptionsMenu");
     }
+
 }
