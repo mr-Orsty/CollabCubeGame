@@ -92,6 +92,11 @@ public class MenuManager : MonoBehaviourPunCallbacks
         SceneManager.LoadScene("Menu");
     }
 
+    public void BackToMenuInGame()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     public void PlayButton()
     {
         SceneManager.LoadScene("Multiplayer");
