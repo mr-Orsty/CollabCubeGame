@@ -17,6 +17,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
 
     public bool isPaused;
     public GameObject Panel;
+    public GameObject _panel;
 
     void Start()
     {
@@ -52,6 +53,20 @@ public class MenuManager : MonoBehaviourPunCallbacks
                 PauseGame();
             }
         }
+
+    }
+
+    public void OptionsInGame()
+    {
+
+        _panel.SetActive(true);
+
+    }
+
+    public void CloseOptionsInGame()
+    {
+
+        _panel.SetActive(false);
 
     }
 
