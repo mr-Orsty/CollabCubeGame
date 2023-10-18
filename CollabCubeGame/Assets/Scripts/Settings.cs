@@ -9,6 +9,7 @@ public class Settings : MonoBehaviour
 {
 
     public TMP_Dropdown resolutionDropdown;
+    public Toggle boxFps;
 
     Resolution[] resolutions;
 
@@ -33,6 +34,15 @@ public class Settings : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.RefreshShownValue();
         LoadSettings(currentResolutionIndex);
+
+        if(PlayerPrefs.GetInt("ShowFPS") == 1)
+        {
+            boxFps.isOn = true;
+        }
+        else
+        {
+            boxFps.isOn = false;
+        }
 
     }
 
@@ -72,6 +82,18 @@ public class Settings : MonoBehaviour
             Screen.fullScreen = System.Convert.ToBoolean(PlayerPrefs.GetInt("FullscreenPreference"));
         else
             Screen.fullScreen = true;
+    }
+
+    public void ShowFps()
+    {
+        if(boxFps.isOn)
+        {
+            PlayerPrefs.SetInt("ShowFPS", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("ShowFPS", 0);
+        }
     }
 
 }
