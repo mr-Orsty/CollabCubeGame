@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
         textName.text = view.Owner.NickName;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (view.IsMine)
         {

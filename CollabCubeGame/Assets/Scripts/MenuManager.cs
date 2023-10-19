@@ -15,59 +15,10 @@ public class MenuManager : MonoBehaviourPunCallbacks
     public TMP_InputField createInput;
     public TMP_InputField joinInput;
 
-    public bool isPaused;
-    public GameObject Panel;
-    public GameObject _panel;
-
     void Start()
     {
         inputName.text = PlayerPrefs.GetString("name");
         PhotonNetwork.NickName = inputName.text;
-    }
-
-    public void PauseGame()
-    {
-        Panel.SetActive(true);
-        isPaused = true;
-        Time.timeScale = 0f;
-    }
-
-    public void ResumeGame()
-    {
-        Panel.SetActive(false);
-        isPaused = false;
-        Time.timeScale = 1f;
-    }
-
-    public void Update()
-    {
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
-        }
-
-    }
-
-    public void OptionsInGame()
-    {
-
-        _panel.SetActive(true);
-
-    }
-
-    public void CloseOptionsInGame()
-    {
-
-        _panel.SetActive(false);
-
     }
 
     public void CreateRoom()
@@ -89,33 +40,13 @@ public class MenuManager : MonoBehaviourPunCallbacks
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("Menu");
-    }
-
-    public void BackToMenuInGame()
-    {
-        SceneManager.LoadScene("Menu");
-    }
-
-    public void PlayButton()
-    {
-        SceneManager.LoadScene("Multiplayer");
-    }
-
-    public void QuitButton()
-    {
-        Application.Quit();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 
     public void SaveName()
     {
         PlayerPrefs.SetString("name", inputName.text);
         PhotonNetwork.NickName = inputName.text;
-    }
-
-    public void OptionsButton()
-    {
-        SceneManager.LoadScene("OptionsMenu");
     }
 
 }
