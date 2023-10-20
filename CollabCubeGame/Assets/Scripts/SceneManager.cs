@@ -14,6 +14,11 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("OptionsMenu");
     }
 
+    public void AcessoriesButton()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("AccessoriesScene");
+    }
+
     public void QuitButton()
     {
         Application.Quit();

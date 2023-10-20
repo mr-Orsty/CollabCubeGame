@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using TMPro;
+using UnityEditor;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,11 +13,11 @@ public class PlayerMovement : MonoBehaviour
     PhotonView view;
     private Collider2D playerCollider;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 

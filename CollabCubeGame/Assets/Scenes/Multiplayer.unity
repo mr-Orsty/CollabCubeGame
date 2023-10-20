@@ -1682,6 +1682,7 @@ MonoBehaviour:
   inputName: {fileID: 401809654}
   createInput: {fileID: 147023433}
   joinInput: {fileID: 1451470460}
+  playerskin: {fileID: 8154015728445560894, guid: 233c919609de4c74388d93350f03afaa, type: 3}
 --- !u!1 &990343241
 GameObject:
   m_ObjectHideFlags: 0
@@ -3291,6 +3292,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1746056260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3723,7 +3736,7 @@ SpriteRenderer:
   m_Size: {x: 1.5, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1660057539 &9223372036854775807
