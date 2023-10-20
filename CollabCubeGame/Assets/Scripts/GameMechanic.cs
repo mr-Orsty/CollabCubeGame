@@ -1,26 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameMechanic : MonoBehaviour
 {
-
-    public GameObject obj;
+    public GameObject enemyPrefab;
+    public float enemySpawnInterval = 1.0f;
 
     private void Start()
     {
-        Invoke("Create", Random.Range(2f, 4f)) ;
-        Create();
+        InvokeRepeating("SpawnEnemy", 0, enemySpawnInterval);
     }
 
-    private void Create()
+    private void SpawnEnemy()
     {
-
-        for (int i = 0; i < 5;)
-        {
-            GameObject EnemyObject = Instantiate(obj, new Vector2(0, 10), Quaternion.Euler(0f, 0f, 0f)) as GameObject;
-        }
-
+        GameObject Enemy = Instantiate(enemyPrefab, new Vector2(Random.Range(-6, 6), 10), Quaternion.identity);
     }
-
 }

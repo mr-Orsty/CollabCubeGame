@@ -4,21 +4,30 @@ using UnityEngine;
 using Photon.Pun;
 using TMPro;
 
-public class Player : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public TMP_Text textName;
 
     public float speed;
     PhotonView view;
+    private Collider2D playerCollider;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 
     void Start()
     {
         view = GetComponent<PhotonView>();
-        
+
         textName.text = view.Owner.NickName;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (view.IsMine)
         {
