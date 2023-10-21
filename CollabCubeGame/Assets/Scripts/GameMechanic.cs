@@ -8,8 +8,7 @@ public class GameMechanic : MonoBehaviour
     public GameObject obj;
 
     private void Start()
-    {
-        Invoke("Create", Random.Range(2f, 4f)) ;
+    { 
         Create();
     }
 
@@ -18,6 +17,7 @@ public class GameMechanic : MonoBehaviour
 
         for (int i = 0; i < 5;)
         {
+            Invoke("Create", Random.Range(2f, 4f));
             GameObject EnemyObject = Instantiate(obj, new Vector2(0, 10), Quaternion.Euler(0f, 0f, 0f)) as GameObject;
         }
 
