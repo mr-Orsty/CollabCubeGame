@@ -378,7 +378,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textName: {fileID: 2740989998411535975}
   speed: 6
-  SRPlayer: {fileID: 2529176557159628852}
 --- !u!212 &-7459745366268345587
 SpriteRenderer:
   m_ObjectHideFlags: 0
