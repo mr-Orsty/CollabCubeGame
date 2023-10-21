@@ -3,9 +3,9 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public float initialSpawnInterval = 5.0f;
-    public float minSpawnInterval = 1.0f;
-    public float spawnIntervalDecrease = 0.06f;
+    public float initialSpawnInterval = 4.0f;
+    public float minSpawnInterval = 0.6f;
+    public float spawnIntervalDecrease = 0.1f;
 
     private float currentSpawnInterval;
     private float timer = 0.0f;
@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
         if (timer >= currentSpawnInterval)
         {
             GameObject newEnemy = Instantiate(enemyPrefab);
-            newEnemy.transform.position = new Vector3(Random.Range(-7, 7), 10, 0);
+            newEnemy.transform.position = new Vector3(Random.Range(-8, 8), 10, 0);
 
             timer = 0.0f;
 

@@ -1682,7 +1682,6 @@ MonoBehaviour:
   inputName: {fileID: 401809654}
   createInput: {fileID: 147023433}
   joinInput: {fileID: 1451470460}
-  playerskin: {fileID: 8154015728445560894, guid: 233c919609de4c74388d93350f03afaa, type: 3}
 --- !u!1 &990343241
 GameObject:
   m_ObjectHideFlags: 0
@@ -3728,7 +3727,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2311659948842064771, guid: 20599ee62320ac34bb682fc5b7698273, type: 3}
+  m_Sprite: {fileID: -6672483609458269425, guid: 513d3ccb4bcc1f44c961b65055d87ef9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3736,7 +3735,7 @@ SpriteRenderer:
   m_Size: {x: 1.5, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1660057539 &9223372036854775807

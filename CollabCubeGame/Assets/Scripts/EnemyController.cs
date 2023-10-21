@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 10.0f;
 
     private void Update()
     {
