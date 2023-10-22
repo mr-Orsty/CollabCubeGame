@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -56,7 +57,12 @@ public class PauseManager : MonoBehaviour
 
     }
 
-    public void BackToMenuInGame()
+    public void LeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+    }
+
+    public void OnLeftRoom()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
