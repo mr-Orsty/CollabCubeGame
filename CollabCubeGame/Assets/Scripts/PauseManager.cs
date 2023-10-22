@@ -62,6 +62,12 @@ public class PauseManager : MonoBehaviour
         PhotonNetwork.LeaveRoom();
     }
 
+    public void BackToMenuInGame()
+    {
+        LeaveRoom();
+        ResumeGame();
+    }
+
     public void OnLeftRoom()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
