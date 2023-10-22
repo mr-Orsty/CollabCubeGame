@@ -1,8 +1,9 @@
+using Photon.Pun;
 using UnityEngine;
 
 public class GameMechanic : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    [SerializeField] private GameObject enemyPrefab;
     public float initialSpawnInterval = 3.0f;
     public float minSpawnInterval = 0.2f;
     public float spawnIntervalDecrease = 0.2f;
@@ -21,8 +22,8 @@ public class GameMechanic : MonoBehaviour
 
         if (timer >= currentSpawnInterval)
         {
-            GameObject newEnemy = Instantiate(enemyPrefab);
-            newEnemy.transform.position = new Vector3(Random.Range(-8, 8), 10, 0);
+            Vector3 spawnPosition = new Vector3(Random.Range(-8, 8), 10, 0);
+            SpawnEnemy(spawnPosition);
 
             timer = 0.0f;
 
@@ -31,5 +32,9 @@ public class GameMechanic : MonoBehaviour
                 currentSpawnInterval -= spawnIntervalDecrease;
             }
         }
+    }
+    private void SpawnEnemy(Vector3 spawnPosition)
+    {
+        GameObject newEnemy = PhotonNetwork.Instantiate(enemyPrefab.name, spawnPosition, Quaternion.identity);
     }
 }

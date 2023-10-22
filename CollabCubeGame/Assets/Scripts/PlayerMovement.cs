@@ -5,13 +5,14 @@ using Photon.Pun;
 using TMPro;
 using UnityEditor;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviourPun
 {
     public TMP_Text textName;
 
     public float speed;
     PhotonView view;
     private Collider2D playerCollider;
+    private EnemySpawnManager enemySpawnManager;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,6 +27,14 @@ public class PlayerMovement : MonoBehaviour
         view = GetComponent<PhotonView>();
 
         textName.text = view.Owner.NickName;
+
+        enemySpawnManager = GameObject.Find("SpawnManager").GetComponent<EnemySpawnManager>();
+
+        if (photonView.IsMine)
+        {
+            Vector3 spawnPosition = new Vector3(0, 0, 0);
+            enemySpawnManager.photonView.RPC("SpawnEnemy", RpcTarget.All, spawnPosition);
+        }
     }
 
     private void FixedUpdate()
