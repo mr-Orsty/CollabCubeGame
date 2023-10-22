@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class GameMechanic : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public float initialSpawnInterval = 3.0f;

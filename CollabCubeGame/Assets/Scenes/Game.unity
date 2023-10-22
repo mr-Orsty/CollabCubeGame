@@ -1397,6 +1397,8 @@ GameObject:
   - component: {fileID: 510872775}
   - component: {fileID: 510872774}
   - component: {fileID: 510872776}
+  - component: {fileID: 510872777}
+  - component: {fileID: 510872778}
   m_Layer: 0
   m_Name: ControllManager
   m_TagString: Untagged
@@ -1450,6 +1452,34 @@ MonoBehaviour:
   pausePanel: {fileID: 191220144}
   optionsPanel: {fileID: 1495479967}
   fpsText: {fileID: 2093756486}
+--- !u!114 &510872777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510872773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194930a1d802fcf418c68880001f2399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRenderer: {fileID: -7459745366268345587, guid: 21c722af7b49e294c9391c6df494341c, type: 3}
+  skins:
+  - {fileID: -6672483609458269425, guid: 513d3ccb4bcc1f44c961b65055d87ef9, type: 3}
+  - {fileID: 3864850897022578843, guid: 3f099ebd3afd5df449ca8b529601dcb1, type: 3}
+--- !u!114 &510872778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510872773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a009ee0ee58094e91a6c964519e136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &516822032
 GameObject:
   m_ObjectHideFlags: 0
